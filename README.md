@@ -3,7 +3,7 @@ Script de Bash para respuesta a incidentes, forense y blindaje en Fedora y Arch 
 Este script nos facilita el Diagnóstico y Contención (Nodo Fedora):
 Nos muestra la identidad del usuario actual, es decir si es un usuario normal o con permisos root. (whoami)
 El espacio disponible en los discos duros en formato entendible y amigable para facilitar nuestro uso, es decir para el uso y entendimiento humano. (df -h).
-Con privilegios de administrador se actualiza el sistema operativo completo e instala de golpe las herramientas que se van a necesitar, y n este caso práctico de ejemplo son htop⁠ y ⁠curl. (sudo apt upgrade ; sudo apt install htop curl).
+Con privilegios de administrador se actualiza el sistema operativo completo e instala de golpe las herramientas que se van a necesitar, y en este caso práctico de ejemplo son htop⁠ y ⁠curl. (sudo apt upgrade ; sudo apt install htop curl).
 Se busca de forma profunda en todo el disco duro un archivo oculto llamado ⁠brecha_seguridad.txt o el archivo a buscar dependiendo del contexto, mandando obligatoriamente todos los mensajes de permisos denegados a /dev/null por medio del protocolo Stderr [2] hacia  el directorio ya antes mencionado /dev/null. (find / -name brecha_seguridad.txt 2>/dev/null)
 Revisa el estatus del servidor web ⁠nginx⁠ o el servidor en cuestión a revisar y fuerza un reinicio limpio del servicio. (systemctl status nginx ; systemctl restart nginx).
 Fase 2: Forense y Blindaje (Nodo Arch Linux)
